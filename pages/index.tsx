@@ -20,7 +20,7 @@ import {
   SkillComponent,
   ProjectComponent,
 } from "../components";
-import { Phone } from "@icon-park/react";
+import { Phone, PhoneTelephone } from "@icon-park/react";
 
 const Home: NextPage = () => {
   return (
@@ -42,7 +42,10 @@ const Home: NextPage = () => {
       >
         <SkillComponent />
         <Divider my={5} />
+        <Box id={'about'}>
         <AboutMeComponent />
+        </Box>
+        
 
         <Center
           borderRadius={5}
@@ -63,7 +66,7 @@ const Home: NextPage = () => {
 
       {/* <ProjectComponent /> */}
 
-      <Box bg={"blackAlpha.900"} py={10} px={{ base: 10, md: 40, lg: 60 }}>
+      <Box id="contact" bg={"blackAlpha.900"} py={10} px={{ base: 10, md: 40, lg: 60 }}>
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={5}>
           <ContactFormComponent />
           
@@ -75,9 +78,9 @@ const Home: NextPage = () => {
               {"AHA CPR Instructor".toUpperCase()}
             </Text>
 
-            <HStack as={'a'}   >
-              <Phone/>
-              <Text  fontWeight={"bold"} color={"white"} >Contact: (443) 414-0807</Text>
+            <HStack color={"white"} as={'a'} href={'tel:443-414-0807'}  alignItems={'center'} >
+              <PhoneTelephone/>
+              <Text  fontWeight={"medium"} color={"white"} >(443) 414-0807</Text>
             </HStack>
           </Box>
             {/* <Stack flexDirection={{ base: "row", lg: "column" }} gap={5}>

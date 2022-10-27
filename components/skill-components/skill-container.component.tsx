@@ -20,7 +20,7 @@ const SkillSectionComponent: NextComponentType = () => {
           <Box mt={5} bg={"green.500"} h={1} w={"20%"} />
         </Box>
 
-        <SimpleGrid columns={{ base: 2, md: 2, lg: 2 }}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }}>
           <SkillComponent
             skill={"Group Package"}
             icon={<Connect size={48} />}

@@ -3,6 +3,8 @@ import { Box, HStack, Image, Text, Button, Heading } from "@chakra-ui/react";
 import type { NextComponentType } from "next";
 import React from "react";
 import NavigationComponent from "./NavigationComponent";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 
 const HeaderComponent: NextComponentType = () => {
   return (
@@ -34,11 +36,18 @@ const HeaderComponent: NextComponentType = () => {
             </Box>
 
             <HStack>
-              <Button colorScheme={"green"} borderRadius={10}>
+              <Button
+                as={AnchorLink}
+                href={"#about"}
+                colorScheme={"green"}
+                borderRadius={0}
+              >
                 BLS Certification
               </Button>
               <Button
-                borderRadius={10}
+                as={AnchorLink}
+                href={"#contact"}
+                borderRadius={0}
                 variant="outline"
                 colorScheme={"whiteAlpha"}
               >
@@ -91,23 +100,27 @@ const HeaderComponent: NextComponentType = () => {
                   justifyContent={"center"}
                   borderRadius={"full"}
                   alignItems={"center"}
-                  boxShadow={'lg'}
+                  boxShadow={"lg"}
                 >
                   <Image
                     w={"full"}
                     src={
                       "https://images.unsplash.com/photo-1606596556957-f6566cc865a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80"
                     }
-                    alt={'Header Background'}
+                    alt={"Header Background"}
                   />
                 </Box>
               </Box>
             </Box>
 
             <Box textAlign={{ base: "center", lg: "unset" }}>
-            <Text color={'yellow'} fontWeight={'bold'}>{("Meet your instructor").toUpperCase()}</Text>
+              <Text color={"yellow"} fontWeight={"bold"}>
+                {"Meet your instructor".toUpperCase()}
+              </Text>
               <Heading color={"white"}>Nadine Henry-Thomas</Heading>
-              <Text fontWeight={'bold'}>{("AHA CPR Instructor").toUpperCase()}</Text>
+              <Text fontWeight={"bold"}>
+                {"AHA CPR Instructor".toUpperCase()}
+              </Text>
               <Text color={"white"}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus et aliquid modi aperiam quo distinctio consequatur
