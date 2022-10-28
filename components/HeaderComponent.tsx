@@ -117,7 +117,7 @@ const HeaderComponent: NextComponentType = () => {
               <Text color={"yellow"} fontWeight={"bold"}>
                 {"Meet your instructor".toUpperCase()}
               </Text>
-              <Heading color={"white"}>Nadine Henry-Thomas</Heading>
+              <Heading color={"white"}>Nadine Henry-Thomas <Box as={'span'} fontSize={'md'}>DNP, MSN-Ed, CMSRN, PCCN</Box></Heading>
               <Text fontWeight={"bold"}>
                 {"AHA CPR Instructor".toUpperCase()}
               </Text>

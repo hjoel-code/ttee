@@ -7,10 +7,11 @@ interface SkillProps {
   skill: string;
   icon: ReactElement;
   image_url: string;
+  onClick?: () => void
 }
 
 export default function SkillComponent(props: SkillProps) {
-  const { skill, icon, image_url } = props;
+  const { skill, icon, image_url, onClick } = props;
   const [show, { off, toggle }] = useBoolean(false);
 
   return (
@@ -18,6 +19,7 @@ export default function SkillComponent(props: SkillProps) {
       overflow={"hidden"}
       position={"relative"}
       _hover={{ cursor: "pointer" }}
+      onClick={onClick}
     >
       <Fade left opposite when={!show}>
         <Center
