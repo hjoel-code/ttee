@@ -26,7 +26,7 @@ const ContactFormComponent: NextComponentType = () => {
   return (
     <Box as={'form'} onSubmit={handleSubmit(onSubmit)}>
       <Heading color={"white"}>Get In Touch</Heading>
-      <Box as={"form"} py={10}>
+      <Box py={10}>
         <InputGroup py={1}>
           <Input {...register('name', {
             required: "Your name is required"
