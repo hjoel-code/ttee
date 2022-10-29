@@ -7,21 +7,20 @@ import {
   SimpleGrid,
   Center,
   Divider,
-  IconButton,
-  Stack,
   HStack,
 } from "@chakra-ui/react";
-
-import * as Park from "@icon-park/react";
 import {
-  HeaderComponent,
   ContactFormComponent,
   AboutMeComponent,
   SkillComponent,
-  ProjectComponent,
+  Header,
+  DiamondComponent,
+  InstructorsContainer
 } from "../components";
 import { Phone, PhoneTelephone } from "@icon-park/react";
-import Header from "../components/header/header.component";
+
+
+
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +32,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header/>
+      <InstructorsContainer/>
 
       <Box
         position={"relative"}
@@ -48,21 +48,7 @@ const Home: NextPage = () => {
         </Box>
         
 
-        <Center
-          borderRadius={5}
-          w={20}
-          h={20}
-          top={-10}
-          left={{ base: 10, md: 60 }}
-          transform={"rotate(45deg)"}
-          bg={"gray.100"}
-          position={"absolute"}
-          boxShadow={"lg"}
-        >
-          <Box transform={"rotate(-45deg)"}>
-            <Park.Down size={32} />
-          </Box>
-        </Center>
+        <DiamondComponent/>
       </Box>
 
       {/* <ProjectComponent /> */}
