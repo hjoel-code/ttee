@@ -1,9 +1,31 @@
-import React from 'react'
+import {
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+} from "@chakra-ui/react";
+import React from "react";
+import MenuContainer from "../menu-container/menu-container.component";
 
-export default function DrawerContainer() {
+interface DrawerProps {
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+}
+
+export default function DrawerContainer({
+  isOpen,
+  onOpen,
+  onClose,
+}: DrawerProps) {
   return (
-    <div>
-      
-    </div>
-  )
+    <Drawer isOpen={isOpen} onClose={onClose}>
+      <DrawerOverlay />
+      <DrawerContent>
+        <DrawerCloseButton />
+        <MenuContainer />
+      </DrawerContent>
+    </Drawer>
+  );
 }

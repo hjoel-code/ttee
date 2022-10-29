@@ -14,7 +14,7 @@ export default function Header() {
 
       <Box {...styles.header_container}>
         <Box {...styles.container_padding}>
-          <Heading>
+          <Heading size={'3xl'} color={'white'}>
             The Total{" "}
             <Box as={"span"} color={"green.500"}>
               Educational Experience
