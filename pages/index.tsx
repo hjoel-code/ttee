@@ -21,6 +21,7 @@ import {
   ProjectComponent,
 } from "../components";
 import { Phone, PhoneTelephone } from "@icon-park/react";
+import Header from "../components/header/header.component";
 
 const Home: NextPage = () => {
   return (
@@ -31,7 +32,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeaderComponent />
+      <Header/>
 
       <Box
         position={"relative"}
